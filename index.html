@@ -7,6 +7,23 @@
   <meta name="description" content="UBE MATRIX SWARM — Predict. Adapt. Evolve. — Work in Project. Sito ufficiale in preparazione.">
   <meta name="robots" content="index,follow">
   <title>UBE MATRIX SWARM | Work in Project</title>
+  <link rel="icon" id="ube-favicon" type="image/png" href="./landing-approved.png">
+  <script>
+    (() => {
+      const artwork = new Image();
+      artwork.onload = () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = 128;
+        canvas.height = 128;
+        const context = canvas.getContext('2d');
+        if (!context) return;
+        // Ritaglio dei quattro cubi originali dal rendering approvato.
+        context.drawImage(artwork, 210, 320, 350, 350, 0, 0, 128, 128);
+        document.getElementById('ube-favicon').href = canvas.toDataURL('image/png');
+      };
+      artwork.src = './landing-approved.png';
+    })();
+  </script>
   <style>
     :root { color-scheme: dark; }
     * { box-sizing: border-box; }
